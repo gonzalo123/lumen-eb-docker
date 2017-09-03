@@ -6,13 +6,12 @@ RUN update-locale LANG=es_ES.UTF-8
 
 # Install dependencies
 RUN apt-get update -y
-RUN apt-get install -y git curl apache2 php7.0 libapache2-mod-php7.0 php7.0-mcrypt php7.0-pgsql php-xdebug
+RUN apt-get install -y git curl apache2 php7.0 libapache2-mod-php7.0 php7.0-mcrypt
 
 ADD code /mnt/code
 
 COPY ./etc/apache/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY ./etc/apache2.conf /etc/apache2/apache2.conf
-COPY ./etc/php/7.0/mods-available/xdebug.ini /etc/php/7.0/mods-available/xdebug.ini
 
 # Configure apache
 RUN a2enmod rewrite
