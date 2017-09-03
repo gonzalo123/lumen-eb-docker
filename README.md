@@ -1,4 +1,4 @@
-## Lumen running on Docker container with Elastic Beanstalk
+## Lumen inside a Docker container with Elastic Beanstalk
 
 I've been involved within a project using Amazon Elastic Beanstalk with a php host. Elastic Beanstalk also allows us to use docker containers. Today I want to experiment a little bit with Docker. 
 
