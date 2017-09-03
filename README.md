@@ -36,8 +36,21 @@ EXPOSE 80
 CMD ["/usr/sbin/apache2", "-D",  "FOREGROUND"]
 ```
 
+Now I can build my Docker Image
+```
 docker build -t gonzalo123/php .
+```
 
+I can run my docker Image locally
+
+```
+docker run -p 8080:80 gonzalo123/php
+```
+
+But, as I told you before, I want to play with Elastic Beanstalk and Docker. So I will create a application in the Elastic Beanstalk's console and create a environ with "eb create" cli command. Now I can deploy my instance to AWS with "eb deploy" or even I can run it locally with 
+
+```
 eb local run
+```
 
-eb deploy
+And that's all. It was exactly what I wanted with this experiment.
